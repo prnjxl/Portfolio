@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  cursor: none;
+}
+
+body {
+  margin: 0;
+  background: #ececec;
+  overflow-x: hidden;
+  cursor: none;
+  color: #000;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.dark body {
+  background: #0a0a0a;
+  color: #f0f0f0;
+}
+
+* {
+  box-sizing: border-box;
+  cursor: none;
+}
+
+a,
+button,
+input,
+textarea,
+select,
+[role="button"] {
+  cursor: none;
+}
