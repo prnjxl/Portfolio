@@ -1,34 +1,17 @@
 import Hero from "@/components/Hero";
 import SkillsGraph from "@/components/SkillsGraph";
+import Markers from "@/components/Markers";
 
 export default function Home() {
   return (
-    /*
-     * Outer wrapper: full viewport, scrollable but scrollbar hidden via CSS.
-     * Inner pages snap naturally at 100vh boundaries.
-     */
-    <div
-      className="
-        h-screen overflow-y-scroll
-        [scrollbar-width:none] [&::-webkit-scrollbar]:hidden
-        scroll-smooth
-      "
-    >
+    <div className="w-full">
       {/* ── Page 1 : Portfolio / Hero ── */}
       <section
         id="portfolio"
-        className="relative h-screen bg-[#ECECEC] dark:bg-[#0a0a0a] transition-colors duration-500"
+        className="relative h-screen w-full flex items-center justify-center"
       >
-        <div
-          className="
-            absolute
-            left-8
-            top-1/2
-            -translate-y-1/2
-            z-40
-            pointer-events-none
-          "
-        >
+        <Markers />
+        <div className="z-40 pointer-events-none">
           <Hero />
         </div>
       </section>

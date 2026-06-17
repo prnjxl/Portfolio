@@ -226,19 +226,17 @@ export default function SkillsGraph() {
     function draw() {
       const dark = document.documentElement.classList.contains("dark");
 
-      const BG = dark ? "#0a0a0a" : "#ECECEC";
+      // We leave the canvas transparent here!
+      // The body handles the smooth color transition behind the canvas.
       const GREY_NODE = dark ? "#9b9b9b" : "#666";
-      const GREY_EDGE = dark
-        ? "rgba(160,158,148,0.25)"
-        : "rgba(80,80,80,0.18)";
+      const GREY_EDGE = dark ? "rgba(160,158,148,0.25)" : "rgba(80,80,80,0.18)";
       const ACCENT = "#7B68EE";
       const TEXT_COL = dark
         ? "rgba(220,218,210,0.85)"
         : "rgba(30,30,30,0.8)";
 
+      // Clear the canvas to be transparent
       ctx.clearRect(0, 0, state.W, state.H);
-      ctx.fillStyle = BG;
-      ctx.fillRect(0, 0, state.W, state.H);
 
       ctx.save();
       ctx.translate(state.tx, state.ty);
