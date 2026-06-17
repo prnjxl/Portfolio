@@ -7,11 +7,28 @@ import { AnimatePresence, motion } from "framer-motion";
 export default function Markers() {
   const [selectedMarker, setSelectedMarker] = useState<number | null>(null);
 
-  // 3 random positions, matching the user's example
   const markerPositions = [
-    { id: 1, top: "30%", left: "20%" },
-    { id: 2, top: "40%", left: "60%" },
-    { id: 3, top: "70%", left: "80%" },
+    { 
+      id: 1, 
+      top: "30%", 
+      left: "20%",
+      text: "First marker details. Add your custom text here.",
+      dropdownClass: "top-full mt-2 left-1/2 -translate-x-1/2"
+    },
+    { 
+      id: 2, 
+      top: "40%", 
+      left: "60%",
+      text: "Second marker information goes here.",
+      dropdownClass: "bottom-full mb-9 translate-x-1/2"
+    },
+    { 
+      id: 3, 
+      top: "70%", 
+      left: "80%",
+      text: "Third marker text. The box aligns to the left instead of right.",
+      dropdownClass: "top-full mt-2 right-0"
+    },
   ];
 
   // Close dropdown when clicking outside
@@ -66,15 +83,16 @@ export default function Markers() {
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
-                className="
-                  absolute top-full mt-2 left-1/2 -translate-x-1/2
+                className={`
+                  absolute
+                  ${m.dropdownClass}
                   w-64 p-5 rounded-[3px] shadow-xl
                   bg-white dark:bg-[#1a1a1a] border border-gray-100 dark:border-zinc-800
                   z-50
-                "
+                `}
               >
                 <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+                  {m.text}
                 </p>
               </motion.div>
             )}

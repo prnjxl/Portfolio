@@ -1,5 +1,5 @@
 import Hero from "@/components/Hero";
-import SkillsGraph from "@/components/SkillsGraph";
+import Skills from "@/components/Skills";
 import Markers from "@/components/Markers";
 
 export default function Home() {
@@ -16,8 +16,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Page 2 : Skills Graph ── */}
-      <SkillsGraph />
+      {/* ── Page 2 : Skills Grid ── */}
+      <Skills />
 
       {/* ── Spacer ── */}
       <div className="h-[100px] shrink-0" />
