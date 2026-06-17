@@ -5,6 +5,10 @@
 html {
   scroll-behavior: smooth;
   cursor: none;
+  /* hide scrollbar firefox */
+  scrollbar-width: none;
+  /* hide scrollbar IE/Edge */
+  -ms-overflow-style: none;
 }
 
 body {
@@ -14,6 +18,17 @@ body {
   cursor: none;
   color: #000;
   transition: background-color 0.5s ease, color 0.5s ease;
+  /* hide scrollbar firefox */
+  scrollbar-width: none;
+  /* hide scrollbar IE/Edge */
+  -ms-overflow-style: none;
+}
+
+/* hide scrollbar webkit (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
 }
 
 .dark body {

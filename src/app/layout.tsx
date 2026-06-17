@@ -2,6 +2,7 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 import CustomCursor from "@/components/CustomCursor";
 import ThemeProvider from "@/components/ThemeProvider";
+import FloatingMenu from "@/components/FloatingMenu";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,6 +21,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <ThemeProvider>
           <CustomCursor />
+          <FloatingMenu />
           {children}
         </ThemeProvider>
       </body>

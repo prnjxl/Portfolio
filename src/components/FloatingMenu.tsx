@@ -12,9 +12,28 @@ export default function FloatingMenu() {
   const [open, setOpen] = useState(false);
 
   const scrollToSection = (id: string) => {
-    document
-      .getElementById(id)
-      ?.scrollIntoView({ behavior: "smooth" });
+    // Find the element and its nearest scrollable ancestor
+    const target = document.getElementById(id);
+    if (!target) return;
+
+    // Walk up to find the overflow-y-scroll container
+    let scrollParent: HTMLElement | null = target.parentElement;
+    while (scrollParent) {
+      const style = window.getComputedStyle(scrollParent);
+      const overflow = style.overflowY;
+      if (overflow === "scroll" || overflow === "auto") break;
+      scrollParent = scrollParent.parentElement;
+    }
+
+    if (scrollParent) {
+      scrollParent.scrollTo({
+        top: target.offsetTop,
+        behavior: "smooth",
+      });
+    } else {
+      // Fallback: native scrollIntoView
+      target.scrollIntoView({ behavior: "smooth" });
+    }
 
     setOpen(false);
   };
@@ -96,4 +115,4 @@ export default function FloatingMenu() {
       </div>
     </div>
   );
-}
+}
