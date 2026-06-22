@@ -21,7 +21,7 @@ const SKILLS_LIST: Skill[] = [
   { id: "cpp", name: "C++" },
   { id: "react", name: "React" },
   { id: "next", name: "Next.js" },
-  { id: "html", name: "HTML / CSS" },
+  { id: "html", name: "HTML" },
   { id: "tw", name: "Tailwind CSS" },
   { id: "fm", name: "Framer Motion" },
   { id: "node", name: "Node.js" },

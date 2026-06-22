@@ -10,24 +10,38 @@ export default function Markers() {
   const markerPositions = [
     { 
       id: 1, 
-      top: "30%", 
+      top: "40%", 
       left: "20%",
-      text: "First marker details. Add your custom text here.",
-      dropdownClass: "top-full mt-2 left-1/2 -translate-x-1/2"
+      text: "Oh!? Hey there, Welcome to my portfolio webiste.",
+      dropdownClass: "top-full mt-1 left-1/2 -translate-x-1/2"
     },
     { 
       id: 2, 
-      top: "40%", 
+      top: "35%", 
       left: "60%",
-      text: "Second marker information goes here.",
+      text: "I'm Pranjal and I'll be interacting with you through these markers.",
       dropdownClass: "bottom-full mb-9 translate-x-1/2"
     },
     { 
       id: 3, 
       top: "70%", 
       left: "80%",
-      text: "Third marker text. The box aligns to the left instead of right.",
-      dropdownClass: "top-full mt-2 right-0"
+      text: "There are some easter eggs too. Like triple click the website anywhere. Cool right!",
+      dropdownClass: "top-full mt-1 right-0"
+    },
+    { 
+      id: 4, 
+      top: "110%", 
+      left: "15%",
+      text: "Here are some of my skills which I grinded over the past years.",
+      dropdownClass: "top-full mt-1 left-0"
+    },
+    { 
+      id: 5, 
+      top: "90%", 
+      left: "50%",
+      text: "More about me as we explore the website.",
+      dropdownClass: "bottom-full mb-9 right-0"
     },
   ];
 

@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import CustomCursor from "@/components/CustomCursor";
 import ThemeProvider from "@/components/ThemeProvider";
 import FloatingMenu from "@/components/FloatingMenu";
+import Loader from "@/components/Loader";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,6 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <ThemeProvider>
+          <Loader />
           <CustomCursor />
           <FloatingMenu />
           {children}
